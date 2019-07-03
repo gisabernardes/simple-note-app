@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel='stylesheet' href='style.css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/289d45e2ff.js"></script>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -44,16 +44,16 @@
           </div>
           <div class="col-md-2 p-1">
             <button id="btn-save" type="button" class="btn btn-outline-info"><span class="fa fa-plus"></span></button>
-            <button id="btn-delete" type="button" class="btn btn-outline-danger"><span class="fa fa-remove"></span></button>
+            <button id="btn-delete" type="button" class="btn btn-outline-danger"><span id="btn-icon" class="fa fa-eraser"></span></button>
           </div>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <noteList>
-        <div id='listed'></div>
-      </noteList>
+      <div id='listed' class="card-columns">
+        <!-- TODO ITEMS -->
+      </div>
     </div>
 
   </main>
