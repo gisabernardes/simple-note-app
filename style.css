@@ -1,17 +1,14 @@
-/* TODO INPUT */
-
-.App {
-  text-align: center;
+body {
+  background-color: #F8F8FF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
-.todo-wrapper {
-  margin: 20px auto 20px auto;
-  width: 600px;
-  padding: 20px;
+.upper {
+  text-transform: uppercase;
 }
 
-
-/* TODO ITEM */
+/* ITEM */
 
 .within-list {
   cursor: pointer;
@@ -87,4 +84,38 @@
 
 .pink {
   background-color: #FF89FD;
+}
+
+/* Social Media */
+.fab {
+    padding: 8px;
+    font-size: 12px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-instagram {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
 }
