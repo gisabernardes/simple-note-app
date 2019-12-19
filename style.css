@@ -1,11 +1,221 @@
+:root {
+  --detail-color: #D10294;
+  --section-color: #616161;
+  --white-color: #F8F8FF;
+  --header-color: #444649;
+}
+
+img,
+picture,
+video,
+embed {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;}
+
+  a:hover {
+    color: var(--detail-color);
+    text-decoration: none;
+}
+
 body {
-  background-color: #F8F8FF;
+  color: var(--white-color);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  text-align: center;
+  margin: 0px;
+  font-size: 8pt;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 70px 0 70px 0;
+  color: var(--section-color);
+  line-height: 11pt;
+  position: relative;}
+
+  section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box; }
+
+  section .flex-50-gt-sm {
+    display: block;
+}
+
+section:nth-of-type(1) {
+  padding: 0 10px;
+  color: var(--white-color);
+}
+
+section:nth-of-type(2) {
+  color: var(--white-color);
+  height: calc(78.3vh + 53px);
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;}
+
+  .flex.wrap {
+    flex-wrap: wrap;}
+
+  .flex.row {
+    flex-direction: row;
+}
+
+nav {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  background: #1B242F;
+  border-bottom: 3px solid var(--detail-color);
+  text-align: left;
+  z-index: 99;}
+
+  nav .link-wrap {
+    max-width: 1200px;
+    width: 100%;
+    position: absolute;
+    top: 53px;
+    background: #333;
+    overflow: hidden;
+    height: 0;
+    text-align: right;}
+
+  nav .link-wrap div {
+    padding: 12px 20px;
+    font-size: 12pt;
+    cursor: pointer;
+}
+
+.header {
+  font-size: 25pt;
+  position: relative;
+  color: var(--header-color);
+  position: relative;
+}
+
+.header-bar {
+  margin: 25px 0 60px 0;
+  width: 70px;
+  height: 4px;
+  background: var(--header-color);
+}
+
+.highlight {
+  color: var(--detail-color);
+}
+
+.label {
+  font-size: 14pt;
+  font-weight: 500;
 }
 
 .upper {
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 290px){
+  .header {
+    font-size: 18pt;
+  }
+
+  nav .link-wrap {
+    position: initial;
+    background: none;
+    overflow: visible;
+    height: initial;
+    text-align: center;}
+
+    nav .link-wrap div {
+      margin: 0 5px;
+      padding: initial;
+      font-size: initial;
+      display: inline;
+  }
+}
+
+@media screen and (min-width: 600px){
+  body {
+    font-size: 12pt;
+  }
+
+  section {
+    line-height: 18pt;
+    padding: 100px 0 130px 0;}
+
+    section .container {
+    padding: 0 10px;
+  }
+
+  nav .link-wrap {
+    position: initial;
+    background: none;
+    overflow: visible;
+    height: initial;
+    text-align: center;}
+
+    nav .link-wrap div {
+      margin: 0 5px;
+      padding: initial;
+      font-size: initial;
+      display: inline;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .header {
+    font-size: 30pt;
+  }
+
+  .header-bar {
+    margin: 25px 0 50px 0;
+  }
+
+  .label {
+    font-size: 18pt;
+  }
+}
+
+@media screen and (min-width: 960px){
+  .flex.row-gt-sm {
+    flex-direction: row;}
+
+    .flex-50-gt-sm {
+      -webkit-flex: 1 1 50%;
+      -ms-flex: 1 1 50%;
+      flex: 1 1 50%;
+      max-width: 50%;
+      max-height: 100%;
+      box-sizing: border-box;
+  }
+
+  nav .link-wrap {
+    position: initial;
+    background: none;
+    overflow: visible;
+    height: initial;
+    text-align: right;}
+
+    nav .link-wrap div {
+      margin: 0 5px;
+      padding: initial;
+      font-size: initial;
+      display: inline;
+  }
 }
 
 /* ITEM */
@@ -89,12 +299,12 @@ body {
 /* Social Media */
 .fab {
     padding: 8px;
-    font-size: 12px;
+    font-size: 14px;
     width: 30px;
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
-    border-radius: 50%;
+    border-radius: 30%;
 }
 
 .fa:hover {
@@ -118,4 +328,34 @@ body {
 .fa-twitter {
     background: #55ACEE;
     color: white;
+}
+
+.fa-github {
+    background: white;
+    color: #24292e;
+}
+
+footer {
+  background: #1B242F;
+  padding: 35px 0 35px 0;
+  position: relative;}
+
+  footer .footnote {
+    font-size: 10pt;
+    color: #8F9AA7;
+    margin-top: 30px;
+    opacity: 0.6;
+}
+
+.btn-dark {
+    color: #343a40;
+    background-color: #fff;
+    border-color: #343a40;
+}
+
+.btn-dark:hover {
+    color: #23272b;
+    background-color: #fff;
+    border-color: #1d2124;
+    opacity: 0.7;
 }

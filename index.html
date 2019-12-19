@@ -3,59 +3,92 @@
 
 <head>
   <meta charset='utf-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel='stylesheet' href='style.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/2483004d01.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel='stylesheet' href='style.css'>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <title>Simple Note App</title>
+  <title>Gisele Silva | Simple Note App</title>
 </head>
 
 <body>
-  <nav id="header" class="navbar navbar-expand-sm navbar-light bg-light upper">
-    <a href="#" class="navbar-brand">Simple Note App</a>
-    <div style="width: 100%; text-align: right;">
-      <form>
-        <a href="https://www.linkedin.com/in/gisabernardess/" target="_blank" class="fab fa-linkedin"></a>
-        <a href="https://www.instagram.com/gisabernardess/" target="_blank" class="fab fa-instagram"></a>
-        <a href="https://twitter.com/gisabernardess" target="_blank" class="fab fa-twitter"></a>
-      </form>
-    </div>
-  </nav>
-  <div class="content py-3">
-    <div class="row flex-x1-nowrap">
-      <main class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-        <div class="container">
-          <div class="row">
-            <div id='color-select'>
-              <div class='color-box white'></div>
-              <div class='color-box orange'></div>
-              <div class='color-box banana'></div>
-              <div class='color-box honeydew'></div>
-              <div class='color-box flora'></div>
-              <div class='color-box aqua'></div>
-              <div class='color-box ice'></div>
-              <div class='color-box sky'></div>
-              <div class='color-box orchid'></div>
-              <div class='color-box lavendar'></div>
-              <div class='color-box pink'></div>
+  <div class="overflow-wrap">
+    <!-- HEADER -->
+    <section id="header">
+      <div class="flex">
+        <nav class="flex">
+          <div class="link-wrap">
+
+            <div><a href="https://www.linkedin.com/in/gisabernardess/" target="_blank" class="fab fa-linkedin"></a>
             </div>
+            <div><a href="https://www.instagram.com/gisabernardess/" target="_blank" class="fab fa-instagram"></a>
+            </div>
+            <div><a href="https://twitter.com/gisabernardess" target="_blank" class="fab fa-twitter"></a></div>
+            <div><a href="https://github.com/gisabernardess" target="_blank" class="fab fa-github fa-3x"></a></div>
           </div>
-          <div class="row">
-            <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 p-1">
+        </nav>
+      </div>
+    </section>
+
+    <!-- INPUT -->
+    <section id="home">
+      <div class="container">
+        <div class="header upper">Simple Note App</div>
+        <div class="flex">
+          <div class="header-bar"></div>
+        </div>
+        <div class="flex row-gt-sm">
+          <div class="flex flex-50-gt-sm">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
               <input id="input-field" class="form-control" type="text" placeholder="Something here..">
             </div>
-            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 p-1">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
+              <div id='color-select'>
+                <div class='color-box white'></div>
+                <div class='color-box orange'></div>
+                <div class='color-box banana'></div>
+                <div class='color-box honeydew'></div>
+                <div class='color-box flora'></div>
+                <div class='color-box aqua'></div>
+                <div class='color-box ice'></div>
+                <div class='color-box sky'></div>
+                <div class='color-box orchid'></div>
+                <div class='color-box lavendar'></div>
+                <div class='color-box pink'></div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto my-1 text-right">
               <button id="btn-save" type="button" class="btn btn-outline-info"><span class="fa fa-plus"></span></button>
               <button id="btn-delete" type="button" class="btn btn-outline-danger"><span id="btn-icon"
                   class="fa fa-eraser"></span></button>
             </div>
           </div>
         </div>
+
+        <!-- TASKS -->
+
+
+
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="info-box">
+        <a role="button" href="https://github.com/gisabernardess/angular-crud" class="btn btn-dark btn-sm"><span
+            class="fab fa-github"></span>
+          View on Github</a>
+        <div class="footnote">
+          GISELE SILVA <span class="highlight">©2019</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- 
+  <div class="content py-3">
+    <div class="row flex-x1-nowrap">
+      <main class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="container">
           <div class="row">
             <div id='listed' class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11 p-3 card-columns">
@@ -66,22 +99,15 @@
       </main>
     </div>
 
-  </div>
+  </div> -->
 
-
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script type='text/javascript' src='app.js'></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
