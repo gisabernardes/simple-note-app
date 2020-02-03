@@ -1,7 +1,7 @@
 <div id="readme" class="Box-body readme blob js-code-block-container">
   <article class="markdown-body entry-content p-3 p-md-6" itemprop="text">
     <h3 align="center">
-      <img alt="simple-note-app" src="" width="300px" style="max-width:100%;">
+      <img alt="simple-note-app" src="https://user-images.githubusercontent.com/17882257/73674168-affb3e00-468e-11ea-8b1d-409a452bc4ee.png" width="300px" style="max-width:100%;">
     </h3>
     <h2 align="center">Simple Note App</h2>
     <blockquote align="center">“The future belongs to those who believe in the beauty of their dreams.” - Eleanor Roosevelt</blockquote>
@@ -24,16 +24,10 @@
       </ul>
     </ul>
     <h2><a class="anchor" aria-hidden="true" href="#information_source-how-to-use">:information_source:</a> How To Use </h2>
-    <p>To clone and run this application, you'll need <a href="https://git-scm.com" rel="nofollow">Git</a>, <a href="https://nodejs.org/" rel="nofollow">Node.js</a> + <a href="https://legacy.yarnpkg.com" rel="nofollow">Yarn</a>. From your command line:</p>
-    <div class="highlight highlight-source-shell">
-      <pre>
-        <span class="pl-c"><span class="pl-c">#</span> Clone this repository</span> 
-        $ git clone https://github.com/gisabernardess/simple-note-app <br/>
-        <span class="pl-c"><span class="pl-c">#</span> Open index.html in your browser</span>
-      </pre>
-    </div>
-    <br/>
+    <div class="highlight highlight-source-shell"><pre><span class="pl-c"><span class="pl-c">#</span> Clone this repository</span> 
+$ git clone https://github.com/gisabernardess/simple-note-app <br/>
+<span class="pl-c"><span class="pl-c">#</span> Open index.html in your browser</span></pre></div>
     <hr>
-    <p>Made with ♥ by Gisele Silva :wave: <a href="https://www.linkedin.com/in/gisabernardess/" rel="nofollow">Get in touch!</a></p>
-  </article>
+<p>Made with ♥ by Gisele Silva :wave: <a href="https://www.linkedin.com/in/gisabernardess/" rel="nofollow">Get in touch!</a></p>
+</article>
 </div>
