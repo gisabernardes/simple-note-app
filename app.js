@@ -1,65 +1,86 @@
-$(document).ready(function () {
+var inputEl = document.getElementById('input-field');
+var colorsEl = document.getElementsByClassName('color-box');
+var btnSaveEl = document.getElementById('btn-save');
+var btnDeleteEl = document.getElementById('btn-delete');
+var listEl = document.getElementById('listed');
 
-  var noteCount = 0;
-  var activeNote = null;
-  var clickButton = (function () {
-    var body = $('#input-field').val();
-    if (body === '') {
-      alert('Please write a note.');
-      return;
-    }
-    var color = $('#input-field').css('background-color');
-    var id = noteCount + 1;
-    if (activeNote) {
-      $('#' + activeNote)[0].children[0].textContent = body;
-      $('#' + activeNote)[0].children[0].style.backgroundColor = color;
-      document.getElementById("btn-icon").classList.remove("fa-remove");
-      document.getElementById("btn-icon").classList.add("fa-eraser");
-      activeNote = null;
-    } else {
-      $('#listed').append('<div id="note' + id + '" class="card shadow-sm rounded" style="background-color: ' + color + '">'
-        + '<div class="card-text p-3">' + body + '</div>'
-        + '</div>');
-      noteCount++;
-    };
-    $('#input-field').val('');
-    $('#input-field').css('background-color', 'white');
-  });
+var noteCount = 0;
+var activeNote = null;
 
-  $('.color-box').click(function () {
-    var color = $(this).css('background-color');
-    $('#input-field').css('background-color', color);
-  });
+for (var i = 0; i < colorsEl.length; i++) {
+  var color = convertColor(colorsEl[i].style.backgroundColor);
+  colorsEl[i].setAttribute('onclick', 'inputColor("' + color + '")');
+}
 
-  $('#input-field').keypress(function (event) {
-    var keycode = (event.keyCode ? event.keyCode : event.which);
-    if (keycode == '13') {
-      clickButton();
-    }
-  });
+function convertColor(color) {
+  var result = w3color(color.toLowerCase());
+  return result.valid ? result.toHexString() : '';
+}
 
-  $('#btn-save').click(clickButton);
+function inputColor(color) {
+  inputEl.style.backgroundColor = color;
+}
 
-  $('#btn-delete').click(function () {
-    if (activeNote) {
-      $('#' + activeNote)[0].remove();
-      document.getElementById("btn-icon").classList.remove("fa-remove");
-      document.getElementById("btn-icon").classList.add("fa-eraser");
-      activeNote = null;
-    }
-    $('#input-field').val('');
-    $('#input-field').css('background-color', 'white');
-  });
+inputEl.onkeypress = function (event) {
+  var keycode = (event.keyCode ? event.keyCode : event.which);
+  if (keycode == '13') {
+    btnSaveEl.onclick();
+  }
+}
 
-  $('#listed').click(function (e) {
-    var id = e.target.parentElement.id;
-    var color = e.target.style.backgroundColor;
-    activeNote = id;
-    var bodySel = e.target.textContent;
-    $('#input-field').val(bodySel);
-    $('#input-field').css('background-color', color);
-    document.getElementById("btn-icon").classList.remove("fa-eraser");
-    document.getElementById("btn-icon").classList.add("fa-remove");
-  });
+btnSaveEl.onclick = function () {
+  var text = inputEl.value;
+  if (text === '') {
+    alert('Please write a note.');
+    return;
+  }
+  var id = noteCount + 1;
+  var color = inputEl.style.backgroundColor;
+  if (activeNote) {
+    document.querySelector('#listed div[id=note' + activeNote + ']').style.backgroundColor = color;
+    document.querySelector('#listed div[id=note' + activeNote + '] p').textContent = text;
+    document.getElementById("btn-icon").classList.remove("fa-remove");
+    document.getElementById("btn-icon").classList.add("fa-eraser");
+    activeNote = null;
+  } else {
+    var textEl = document.createElement('p');
+    textEl.setAttribute('class', 'card-text p-3');
+    textEl.appendChild(document.createTextNode(text));
+    var containerEl = document.createElement('div');
+    containerEl.setAttribute('id', 'note' + id);
+    containerEl.setAttribute('class', 'card shadow-sm rounded');
+    containerEl.setAttribute('onclick', 'editNote(' + id + ')');
+    containerEl.style.backgroundColor = color || '#fff';
 
-});
+    containerEl.appendChild(textEl);
+    listEl.appendChild(containerEl);
+
+    noteCount++;
+  }
+
+  inputEl.value = '';
+  inputEl.style.backgroundColor = '#fff';
+}
+
+function editNote(id) {
+  var itemEl = document.getElementById('note' + id);
+  var textItem = itemEl.querySelector('p').textContent;
+  activeNote = id;
+  inputEl.value = textItem;
+  inputEl.style.backgroundColor = itemEl.style.backgroundColor;
+
+  document.getElementById("btn-icon").classList.remove("fa-eraser");
+  document.getElementById("btn-icon").classList.add("fa-remove");
+}
+
+btnDeleteEl.onclick = function () {
+  if (activeNote) {
+    var note = listEl.querySelector('div[id=note' + activeNote + ']');
+    note.remove();
+    activeNote = null;
+  }
+  inputEl.value = '';
+  inputEl.style.backgroundColor = '#fff';
+  document.getElementById("btn-icon").classList.remove("fa-remove");
+  document.getElementById("btn-icon").classList.add("fa-eraser");
+}
