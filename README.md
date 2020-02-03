@@ -3,14 +3,13 @@
     <h3 align="center">
       <img alt="simple-note-app" src="https://user-images.githubusercontent.com/17882257/73674168-affb3e00-468e-11ea-8b1d-409a452bc4ee.png" width="300px" style="max-width:100%;">
     </h3>
-    <h2 align="center">Simple Note App</h2>
+    <h2 align="center"></h2>
     <blockquote align="center">“The future belongs to those who believe in the beauty of their dreams.” - Eleanor Roosevelt</blockquote>
     <p align="center">
       <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/gisabernardess/simple-note-app">
       <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/gisabernardess/simple-note-app">
       <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/gisabernardess/simple-note-app">
       <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/gisabernardess/simple-note-app">
-      <img alt="GitHub" src="https://img.shields.io/github/license/gisabernardess/simple-note-app">
     </p>
     <h2><a class="anchor" aria-hidden="true" href="#rocket-technologies">:rocket:</a> Technologies </h2>
     <ul>
