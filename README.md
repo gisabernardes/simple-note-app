@@ -12,7 +12,7 @@
       <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/gisabernardess/simple-note-app">
     </p>
     <h3 align="center">
-      <a href="https://gisabernardess.github.io/simple-note-app/" rel="nofollow">View Demo</a>
+      <a href="https://gisabernardess.github.io/simple-note-app/" rel="nofollow" target="_blank">View Demo</a>
     </h3>
     <h2><a class="anchor" aria-hidden="true" href="#rocket-technologies">:rocket:</a> Technologies </h2>
     <ul>
